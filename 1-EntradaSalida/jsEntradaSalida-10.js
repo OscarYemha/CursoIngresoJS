@@ -6,5 +6,5 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 	let importe = parseInt(document.getElementById("txtIdImporte").value);
-	document.getElementById("txtIdResultado").value = parseInt(importe - ((importe*25)/100));
+	document.getElementById("txtIdResultado").value = importe - ((importe*25)/100).toFixed();
 }
