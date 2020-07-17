@@ -28,6 +28,6 @@ function dividir()
 {
 	let num1 = parseInt(document.getElementById("txtIdNumeroUno").value);
 	let num2 = parseInt(document.getElementById("txtIdNumeroDos").value);
-	alert("El resultado del cociente es " + (num1/num2));
+	alert("El resultado del cociente es " + (num1/num2).toFixed(2));
 }
 
