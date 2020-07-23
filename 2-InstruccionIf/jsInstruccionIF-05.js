@@ -6,5 +6,5 @@ function mostrar()
 	if(!(age>=13 && age<=17)){
 		alert("No es adolescente")
 	}
-
+	//if((age<13 || age>17)) también funciona según ejemplo de la clase
 }//FIN DE LA FUNCIÓN
