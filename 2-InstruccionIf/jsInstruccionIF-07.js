@@ -5,9 +5,7 @@ function mostrar()
 	let status = document.getElementById("estadoCivil").value;
 	 
 	if(age<18 && status!=="Soltero"){
-		alert("Es muy pequeño para NO ser soltero")
+		alert("Es muy pequeño para NO ser soltero.")
 	}
 	
-
-
 }//FIN DE LA FUNCIÓN
