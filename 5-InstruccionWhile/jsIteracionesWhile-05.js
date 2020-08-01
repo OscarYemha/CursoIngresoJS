@@ -6,10 +6,9 @@ function mostrar()
 	let sexo;
 	do{
 		sexo = prompt("ingrese su sexo: f ó m");
+		sexo = sexo.toLowerCase();
 	}while(sexo!=="f" && sexo!=="m");
 
-	document.getElementById("txtIdSexo").value = sexo;
+	document.getElementById("txtIdSexo").value = "Usted ingresó: " + sexo;
 
-
-	txtIdSexo.value=sexoIngresado;
 }//FIN DE LA FUNCIÓN

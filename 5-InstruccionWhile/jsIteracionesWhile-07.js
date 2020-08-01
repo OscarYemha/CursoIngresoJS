@@ -4,37 +4,21 @@ e informar la suma acumulada y el promedio.
 */
 function mostrar(){
 
+	let suma = 0;
 	let i = 0;
-	let contador = 0;
-	let respuesta = prompt("Quiere sumar números?");
-	respuesta = respuesta.toLowerCase();
+	let respuesta;
 
-	switch(respuesta){
-		case "si":
-			while(respuesta === "si"){
-				respuesta = prompt("Ingrese un número");
-				respuesta = parseInt(respuesta);
-				i += respuesta;
-				respuesta = prompt("Quiere agregar otro número?");
-				respuesta = respuesta.toLowerCase();
-				if(respuesta === "si"){
-					contador++;
-				}
-			}
+	do{
+		respuesta = prompt("Ingrese un número:");
+		respuesta = parseInt(respuesta);
+		suma += respuesta;
+		respuesta = prompt("¿Quiere agregar otro número? Responda Sí o No.");
+		respuesta = respuesta.toLowerCase();
+		i ++;
+	}while(respuesta === "si");
 
-			document.getElementById("txtIdSuma").value = i;
 
-			if(contador === 0){
-				document.getElementById("txtIdPromedio").value = i;
-			}else{
-				document.getElementById("txtIdPromedio").value = i / 2;
-			}
-
-			alert("Programa finalizado");
-			break;
-
-		default:
-			alert("Programa finalizado");
-			break;
-	}
+	document.getElementById("txtIdSuma").value = "El resultado de la suma es " + suma;
+	document.getElementById("txtIdPromedio").value = "El promedio de los números sumados es " + (suma/i).toFixed(1)
+	
 }

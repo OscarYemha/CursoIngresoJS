@@ -1,15 +1,15 @@
-function mostrar() {
+function mostrar(){
 	let i = 0;
-	let acumulador = 0;
+	let suma = 0;
 	let numeroIngresado;
 
-	while (i < 5) {
-		numeroIngresado = prompt("Ingrese un número");
+	while (i<5){
+		numeroIngresado = prompt("Ingrese un número:");
 		numeroIngresado = parseInt(numeroIngresado);
-		acumulador += numeroIngresado;
-		i++;
+		suma += numeroIngresado;
+		i++;		
 	}
 
-	document.getElementById("txtIdSuma").value = acumulador;
-	document.getElementById("txtIdPromedio").value = acumulador / 2
+	document.getElementById("txtIdSuma").value = "El resultado de la suma es " + suma;
+	document.getElementById("txtIdPromedio").value = "El promedio de los números sumados es " + (suma/i).toFixed(1);
 }//FIN DE LA FUNCIÓN
