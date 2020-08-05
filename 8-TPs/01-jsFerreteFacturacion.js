@@ -8,7 +8,7 @@ function Sumar ()
     let num1 = parseFloat(document.getElementById("txtIdPrecioUno").value);
     let num2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
     let num3 = parseFloat(document.getElementById("txtIdPrecioTres").value);
-
+    
     alert("El resultado total es " + (num1+num2+num3));
 }
 function Promedio () 

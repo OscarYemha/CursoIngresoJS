@@ -7,20 +7,56 @@ secreto del 1 al 100, en la pantalla del juego
 “Usted es un ganador!!! y en solo X intentos”.
 de no ser igual se debe informar si “falta…”  para llegar al número secreto  o si “se pasó…”  del número secreto.
 */
-var numeroSecreto; 
-var contadorIntentos;
 
-function comenzar()
-{
-	//Genero el número RANDOM entre 1 y 100
-	 
-		//alert(numeroSecreto );
-	
 
+function comenzar(){
+ 
+  alert("Ingrese un número del 1 al 100:");
+  
 }
 
-function verificar()
-{
-	
-	
+function verificar(){
+  
+  /*let intentos = 0;
+  let numeroIngresado = parseInt(document.getElementById("txtIdNumero").value);
+  
+	if(numeroIngresado===numeroSecreto){
+    intentos ++;
+    alert("¡Usted ha ganado y en sólo " + intentos + " intento/s!");
+  }else{
+    if(numeroIngresado<numeroSecreto){
+      alert("Estuvo a " + (numeroSecreto-numeroIngresado) + " unidades.");
+    }else{
+      alert("Se pasó por " + (numeroIngresado-numeroSecreto) + " unidades.");
+    }
+  }
+  intentos ++;
+  numeroSecreto = Math.ceil(Math.random()*100);
+  document.getElementById("txtIdIntentos").value = intentos;*/
+
+  let numeroSecreto; 
+  let intentos = 0;
+  let numeroIngresado; 
+
+  do{
+
+    numeroSecreto = Math.ceil(Math.random()*100);
+    numeroIngresado = parseInt(document.getElementById("txtIdNumero").value);
+    intentos++;
+
+    if(numeroIngresado===numeroSecreto){
+      alert("¡Usted ha ganado y en sólo " + intentos + " intento/s!");
+    }
+    if(numeroIngresado!==numeroSecreto && numeroIngresado<numeroSecreto){
+      alert("Estuvo a " + (numeroSecreto-numeroIngresado) + " unidades.");
+    }
+    if(numeroIngresado!==numeroSecreto && numeroIngresado>numeroSecreto){
+      alert("Se pasó por " + (numeroIngresado-numeroSecreto) + " unidades.");
+    }
+    
+    document.getElementById("txtIdIntentos").value = intentos;
+    break;
+    
+  }while(numeroSecreto!==numeroIngresado);
+
 }
